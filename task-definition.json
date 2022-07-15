@@ -5,7 +5,15 @@
     {
       "dnsSearchDomains": null,
       "environmentFiles": null,
-      "logConfiguration": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": null,
+        "options": {
+          "awslogs-group": "/ecs/FrontEndTask",
+          "awslogs-region": "ap-southeast-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
       "entryPoint": null,
       "portMappings": [
         {
@@ -25,7 +33,7 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": 128,
+      "memory": 500,
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
@@ -46,21 +54,33 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "FrontendContainer"
+      "name": "FrontEndTask"
     }
   ],
   "placementConstraints": [],
-  "memory": null,
+  "memory": "500",
   "taskRoleArn": null,
   "compatibilities": ["EXTERNAL", "EC2"],
-  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:115725626989:task-definition/FrontendTaskDefination:1",
-  "family": "FrontendTaskDefination",
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:115725626989:task-definition/FrontEndTask:1",
+  "family": "FrontEndTask",
   "requiresAttributes": [
     {
       "targetId": null,
       "targetType": null,
       "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
       "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
     }
   ],
   "pidMode": null,
