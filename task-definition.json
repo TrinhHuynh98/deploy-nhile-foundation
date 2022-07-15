@@ -60,7 +60,10 @@
   "placementConstraints": [],
   "memory": "500",
   "taskRoleArn": null,
-  "compatibilities": ["EXTERNAL", "EC2"],
+  "compatibilities": [
+    "EXTERNAL",
+    "EC2"
+  ],
   "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:115725626989:task-definition/FrontEndTask:1",
   "family": "FrontEndTask",
   "requiresAttributes": [
@@ -84,7 +87,9 @@
     }
   ],
   "pidMode": null,
-  "requiresCompatibilities": ["EC2"],
+  "requiresCompatibilities": [
+    "EC2"
+  ],
   "networkMode": null,
   "runtimePlatform": null,
   "cpu": null,
