@@ -25,11 +25,11 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": null,
+      "memory": 128,
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "115725626989.dkr.ecr.us-east-1.amazonaws.com/be-nhile-foundation",
+      "image": "115725626989.dkr.ecr.ap-southeast-1.amazonaws.com/be-nhile-foundation",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -46,15 +46,15 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "ReactAppContainer"
+      "name": "FrontendContainer"
     }
   ],
   "placementConstraints": [],
-  "memory": "128",
+  "memory": null,
   "taskRoleArn": null,
   "compatibilities": ["EXTERNAL", "EC2"],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:115725626989:task-definition/DeployContainer:1",
-  "family": "DeployContainer",
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:115725626989:task-definition/FrontendTaskDefination:1",
+  "family": "FrontendTaskDefination",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -67,7 +67,7 @@
   "requiresCompatibilities": ["EC2"],
   "networkMode": null,
   "runtimePlatform": null,
-  "cpu": "1024",
+  "cpu": null,
   "revision": 1,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
